@@ -511,4 +511,3 @@ func GetResolverConfig(cfgBytes []byte) (*ResolverConfig, error) {
 
 	return resolvers, nil
 }
-
