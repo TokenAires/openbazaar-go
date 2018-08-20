@@ -3842,10 +3842,6 @@ func (i *jsonAPIHandler) GETPost(w http.ResponseWriter, r *http.Request) {
 	if peerId == "" || strings.ToLower(peerId) == "post" || peerId == i.node.IPFSIdentityString() {
 		sl := new(pb.SignedPost)
 		_, err := cid.Decode(postId)
-		if err != nil {
-			ErrorResponse(w, http.StatusNotFound, "Post ID failed to decode.")
-			return
-		}
 		if err == nil {
 			sl, err = i.node.GetPostFromHash(postId)
 			if err != nil {
