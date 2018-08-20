@@ -255,6 +255,3 @@ func decryptRSA(privKey *libp2p.RsaPrivateKey, ciphertext []byte) ([]byte, error
 	return plaintext, nil
 }
 
-func getCipherTextVersion(ciphertext []byte) uint32 {
-	return binary.BigEndian.Uint32(ciphertext[:CiphertextVersionBytes])
-}
