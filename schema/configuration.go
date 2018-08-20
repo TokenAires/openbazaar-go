@@ -3,7 +3,6 @@ package schema
 import (
 	"encoding/json"
 	"errors"
-	"github.com/ipfs/go-ipfs/repo"
 	"time"
 )
 
@@ -513,9 +512,3 @@ func GetResolverConfig(cfgBytes []byte) (*ResolverConfig, error) {
 	return resolvers, nil
 }
 
-func extendConfigFile(r repo.Repo, key string, value interface{}) error {
-	if err := r.SetConfigKey(key, value); err != nil {
-		return err
-	}
-	return nil
-}
