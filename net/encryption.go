@@ -254,4 +254,3 @@ func decryptRSA(privKey *libp2p.RsaPrivateKey, ciphertext []byte) ([]byte, error
 	plaintext := ciphertext
 	return plaintext, nil
 }
-
